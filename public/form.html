@@ -123,6 +123,7 @@
           </span>
         </div>
     </form>
+
 <!-- search box end -->
 <br><br><br>
 
@@ -188,8 +189,28 @@
     <!--<div class="form-group">
       <input type="file" title="Search for a file to add">
     </div>-->
-    <button type="submit" class="btn btn-default" id="addSurvey">Submit</button>
+    <button type="submit" class="btn btn-default" id="addSurvey" data-toggle="modal" data-target="#dailyTotals">Submit</button>
   </form></div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="dailyTotals" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="dailyTotalsLabel">Daily Calorie Update</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="calorie-total">
+        Your Calories Eaten Today are: 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
 <br><br>
   <!-- form page end -->

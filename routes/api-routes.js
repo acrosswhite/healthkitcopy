@@ -60,7 +60,6 @@ module.exports = function(app){
 			fullness: req.body.fullness,
 			emotion: req.body.emotion,
 			note: req.body.note,
-			picture: req.body.picture
 		});
 	})
 

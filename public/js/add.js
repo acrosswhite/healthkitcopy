@@ -10,6 +10,8 @@ $("#addSurvey").on("click", function(event){
 	};
 
 	addToTable(newMeal);
+	calorieTotal();
+	console.log(calorieTotal());
 
 	$.post("/api/new", newMeal)
 	.done(function(data){
@@ -21,8 +23,6 @@ $("#addSurvey").on("click", function(event){
 	$("#eaten-fullness").val("");
 	$("#emotion-now").val("");
 	$("#note-entry").val("");
-
-
 });
 
 
@@ -40,6 +40,24 @@ function addToTable(meal){
       '</tr>'
    );
 };
+
+
+// function calorieTotal(amount){
+// 	var amount = $("#food-amount").val().trim();
+//    var calorieSum = 0;
+//    var tally = parseInt(calorieSum) + parseInt(amount);
+//    return tally
+
+// }
+
+function calorieTotal(){
+	var sum = 0;
+	var cells = $("#amount")
+
+	for (var i = 0; i < cells.length; i++) {
+		sum+=parseFloat(cells[i].firstChild.data)
+	}
+}
 
 
 function dailyReset() {
